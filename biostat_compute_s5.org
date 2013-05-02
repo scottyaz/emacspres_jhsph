@@ -1,0 +1,75 @@
+# -*- org-export-babel-evaluate: nil -*-
+#+Title: emacs
+#+Babel: :results silent
+
+* emacs
+- cross platform
+- great support for mulitple languages (R, python, C, perl, ruby, etc...)
+- highly flexible (but elisp is not all that fun)
+- somewhat annoying keybinds (at first)
+- [[http://emacswiki.org/][great documentation]] and strong user community
+  
+* some basics
+- =M-x= and =C-x= are your friends
+- buffers and screen splitting (=C-x 0,1,2,3=)
+- =C-h= for help
+- .emacs file for configuration and settings (more to come later)
+
+* dir-mode
+- used to explore directories (=C-x f directory=)
+- quick file manipulation
+- check out [[http://ergoemacs.org/emacs/file_management.html][file management in emacs]]
+
+* emacs speaks statistics
+  - add on package to help support workflows in R, SAS, Stata, and JAGS.
+    - great syntax highlighting
+    - code formatting
+    - great key binds
+  - =M-x R= to start an R session
+  - =C-s= and arrows to change R process
+
+* tramp mode
+  - useful when you are working on multiple computers interactivley
+    - =C-x C-F= then type / =ssh username@servername:dir Enter=
+
+* org-mode
+  - note taking
+    - structure
+    - links (=C-c C-l=)
+  - tables
+  - scheduling (=C-c S=)
+  - tasks (=S-\rightarrow=)
+  - nice exporting utilities
+  - presentations
+
+* other random info
+  - [[http://www.gnu.org/software/auctex/][auctex]] for LaTeX support
+  - installing packages with Marmalade  =M-x package-install= after
+    adding the following to your .emacs:
+    #+begin_src emacs-lisp
+  (require 'package)
+  (add-to-list 'package-archives
+  '("marmalade" .
+  "http://marmalade-repo.org/packages/"))
+  (package-initialize)
+  #+end_src
+  - macros
+  - rectangles
+    
+* useful links
+ - [[http://vgoulet.act.ulaval.ca/en/emacs/mac/][vincent goulet's distribution of emacs]]
+ - [[http://orgmode.org/][org-mode]]
+ - [[http://orgmode.org/orgcard.txt][org-mode cheat sheet]]
+ - [[https://github.com/sigma/org-s5/][making presentations (like this) in org-mode]]
+ - ErgoEmacs
+ - [[http://emacsrocks.com/][emacs rocks videos]]
+   
+* macros
+- record new macro
+  - start recording: =C-x (=
+  - end recording: =C-x )=
+- save macro =C-x C-k n=
+- call last macro: =C-x e=
+- repeat macro
+
+
